@@ -18,10 +18,10 @@ spring:
       routes:
         - id: user
           uri: lb://user
-          pridicates:
+          predicates:
             - Path=/api/users/** 
         - id: transaction
           uri: lb://transaction
-          pridicates:
+          predicates:
             - Path=/api/transactions/** 
   
