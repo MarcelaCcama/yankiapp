@@ -1,5 +1,6 @@
 server:
-  port: 8080
+  port: ${PORT:${SERVER_PORT:0}}
+
 eureka:
   client:
     fetch-registry: true
@@ -7,21 +8,6 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
     instance:
-      hostname: localhost
+      instanve-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: user
-          uri: lb://user
-          predicates:
-            - Path=/api/users/** 
-        - id: transaction
-          uri: lb://transaction
-          predicates:
-            - Path=/api/transactions/** 
   
