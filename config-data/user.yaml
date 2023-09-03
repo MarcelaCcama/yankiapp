@@ -1,7 +1,10 @@
 server:
   port: 8001
 
-data:  
-    mongodb:  
-      uri: mongodb://localhost:27017/yanki
+spring:
+  data:
+      mongodb:
+        user: admin
+        password: admin
+        uri: mongodb://localhost:27017/yanki
 
