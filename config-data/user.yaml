@@ -3,6 +3,5 @@ server:
 
 data:  
     mongodb:  
-      database: yanki
       uri: mongodb://localhost:27017/yanki
 
