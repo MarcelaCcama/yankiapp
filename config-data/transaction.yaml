@@ -1,7 +1,9 @@
 server:
   port: 8002
 
-data:  
-    mongodb:  
-      database: yanki
-      uri: mongodb://admin:admin@localhost:27017/?authMechanism=DEFAULT
+spring:
+  data:
+      mongodb:
+        user: admin
+        password: admin
+        uri: mongodb://localhost:27017/yanki
