@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@FeignClient(name = "transaction")
-@RequestMapping("/api/transactions/")
+@FeignClient(name = "transaction", path = "/api/transactions")
 public interface TransactionFeignClient {
     @PostMapping("/insert")
-    public Maybe<Transaction> insert(@RequestBody Transaction transaction);
+    public Transaction insert(@RequestBody Transaction transaction);
 }
