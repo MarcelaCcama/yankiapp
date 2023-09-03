@@ -4,5 +4,5 @@ server:
 data:  
     mongodb:  
       database: yanki
-      uri: mongodb://admin:admin@localhost:27017/?authMechanism=DEFAULT
+      uri: mongodb://localhost:27017/yanki
 
