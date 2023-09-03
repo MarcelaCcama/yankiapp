@@ -24,5 +24,9 @@ spring:
         - id: transaction
           uri: lb://transaction
           predicates:
-            - Path=/api/transactions/** 
+            - Path=/api/transactions/**
+        - id: app
+          uri: lb://app
+          predicates:
+            - Path=/api/app/** 
   
