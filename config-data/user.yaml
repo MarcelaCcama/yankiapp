@@ -10,6 +10,9 @@ eureka:
     instance:
       instanve-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
+springdoc:
+  packagesToScan: com.yanki.user
+
 spring:
   data:
       mongodb:
