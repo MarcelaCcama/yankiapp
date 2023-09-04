@@ -4,7 +4,6 @@ import com.yanki.app.beans.Transaction;
 import com.yanki.app.beans.User;
 import com.yanki.app.feignclients.TransactionFeignClient;
 import com.yanki.app.feignclients.UserFeignClient;
-import io.reactivex.rxjava3.core.Maybe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
