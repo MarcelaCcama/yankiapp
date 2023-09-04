@@ -1,5 +1,7 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
+  servlet:
+   context-path: /
 
 eureka:
   client:
@@ -10,10 +12,6 @@ eureka:
     instance:
       instanve-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
+
 springdoc:
-  api-docs:
-    enabled: true
-    path: /open-api/api-docs
-  swagger-ui:
-    enabled: true
-    path: /doc/swagger-ui.html
+  packagesToScan: com.yanki.app

@@ -28,6 +28,22 @@ spring:
         - id: app
           uri: lb://app
           predicates:
-            - Path=/api/app/** 
-            - Path=/doc/swagger-ui.html
+            - Path=/api/app/**
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+            
+springdoc:
+  swagger-ui:
+    urls:
+      - name: app
+        url: /v3/api-docs/app
+      - name: user
+        url: /v3/api-docs/user
+      - name: transaction
+        url: /v3/api-docs/transaction
+            
   
