@@ -1,7 +1,5 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
-  servlet:
-   context-path: /
 
 eureka:
   client:
@@ -11,4 +9,3 @@ eureka:
       default-zone: http://localhost:8761/eureka
     instance:
       instanve-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-
