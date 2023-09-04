@@ -29,4 +29,5 @@ spring:
           uri: lb://app
           predicates:
             - Path=/api/app/** 
+            - Path=/doc/swagger-ui.html
   
