@@ -10,4 +10,8 @@ eureka:
     instance:
       instanve-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-  
+springdoc:
+  api-docs:
+    path: /open-api/api-docs
+  swagger-ui:
+    path: /open-api/swagger-ui-custom.html
